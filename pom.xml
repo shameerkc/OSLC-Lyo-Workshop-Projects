@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.eclipse.lyo</groupId>
+    <artifactId>oslc-examples</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>OSCL-Bugzilla-Workshop-Examples</name>
+    <url>https://oslc.github.io/developing-oslc-applications/eclipse_lyo/eclipse-lyo.html</url>
+
+    <modules>
+        <module>ninacrm</module>
+        <module>Lab6</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <version.lyo>2.4.0</version.lyo>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>lyo-releases</id>
+            <name>Eclipse Lyo Releases</name>
+            <url>https://repo.eclipse.org/content/repositories/lyo-releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>lyo-snapshots</id>
+            <name>Eclipse Lyo Snapshots</name>
+            <url>https://repo.eclipse.org/content/repositories/lyo-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.hp.hpl.jena</groupId>
+            <artifactId>jena</artifactId>
+            <version>2.5.7</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.2.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.lyo.oslc4j.core</groupId>
+            <artifactId>oslc4j-core</artifactId>
+            <version>${version.lyo}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.lyo.oslc4j.core</groupId>
+            <artifactId>oslc4j-wink</artifactId>
+            <version>${version.lyo}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.lyo.oslc4j.core</groupId>
+            <artifactId>oslc4j-json4j-provider</artifactId>
+            <version>${version.lyo}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.lyo.oslc4j.core</groupId>
+            <artifactId>oslc4j-jena-provider</artifactId>
+            <version>${version.lyo}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.j2bugzilla</groupId>
+            <artifactId>j2bugzilla</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.lyo.server</groupId>
+            <artifactId>oauth-webapp</artifactId>
+            <version>${version.lyo}</version>
+            <type>war</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.lyo.server</groupId>
+            <artifactId>oauth-core</artifactId>
+            <version>${version.lyo}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.lyo.server</groupId>
+            <artifactId>oauth-consumer-store</artifactId>
+            <version>${version.lyo}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+    </dependencies>
+</project>
