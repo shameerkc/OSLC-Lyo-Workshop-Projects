@@ -11,4 +11,4 @@ COPY * ~/lab6
 
 # EXPOSE 8181
 
-CMD ["/bin/bash", "-c", "cd ~/lab6; mvn jetty:run"]
+CMD ["/bin/bash", "-c", "cd ~/lab6; mvn clean install jetty:run"]

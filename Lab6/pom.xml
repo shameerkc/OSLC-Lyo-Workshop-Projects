@@ -16,6 +16,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- Shameer change version to 2.4.0 from 2.2.0 -->
+        <version.lyo>2.4.0</version.lyo>
     </properties>
 
     <repositories>
@@ -111,6 +113,12 @@
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hp.hpl.jena</groupId>
+            <artifactId>jena</artifactId>
+            <version>2.5.7</version>
         </dependency>
     </dependencies>
 

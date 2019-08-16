@@ -11,4 +11,4 @@ COPY * ~/ninacrm
 
 # EXPOSE 8181
 
-CMD ["/bin/bash", "-c", "cd ~/ninacrm; mvn jetty:run"]
+CMD ["/bin/bash", "-c", "cd ~/ninacrm; mvn clean install jetty:run"]
