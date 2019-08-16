@@ -6,9 +6,11 @@ LABEL maintainer="shameer.kc@gmail.com"
 # RUN git clone https://github.com/shameerkc/OSLC-Lyo-Workshop-Projects /opt/solr
 # RUN cd /opt/solr/ninacrm; mvn install
 
-RUN mkdir ~/ninacrm
-COPY * ~/ninacrm
+COPY . /ninacrm
+
+# RUN mkdir ~/ninacrm
+# COPY . ~/ninacrm
 
 # EXPOSE 8181
 
-CMD ["/bin/bash", "-c", "cd ~/ninacrm; mvn clean install jetty:run"]
+CMD ["/bin/bash", "-c", "pwd; cd /ninacrm; pwd; ls -l; mvn clean install jetty:run"]
